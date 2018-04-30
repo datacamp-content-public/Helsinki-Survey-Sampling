@@ -15,8 +15,12 @@ skills: 1
 key: b9c7132246
 ```
 
-Do some data science.
+Introduction
 
+`@instructions`
+Download the Province'91 data. The dataset is available from [http://vliss.helsinki.fi/chapter2/province91-population.html ](url)
+
+`@hint`
 
 
 
