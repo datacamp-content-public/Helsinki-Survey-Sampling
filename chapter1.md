@@ -18,18 +18,15 @@ key: b9c7132246
 Introduction
 
 `@instructions`
-Download the Province'91 data. The dataset is available from [http://vliss.helsinki.fi/chapter2/province91-population.html ](url)
+Dataset Province'91 is from webpage [http://vliss.helsinki.fi/chapter2/province91-population.html](url).
 
 `@hint`
-Use package haven.
+Run codes
 
 
 `@sample_code`
 ```{r}
-# install package tidyverse
-install.packages("tidyverse")
-# load package tidyverse
-library(tidyverse)
+
 # read Province91 text dataset
 province91 <- read.table("province91.txt",header = TRUE)
 
@@ -38,6 +35,51 @@ head(province91)
 
 # more info
 str(province91)
+
+##############################################################
+# Province91 population
+#
+# VARIABLES
+# Auxiliary variables in the frame(x-variables):
+#   Values of x-variables known for all population elements
+#   Stratum indicator
+#   Cluster indicator
+#   Id = Case ID
+#   Municipality
+#   POP91 = Population in 1991
+#   HOU85 = Number of households (1985 Census)
+#   URB85 = Urbanization (1=town, 0=other)
+#
+# Potential study variables (y-variables):
+#   LAB91 = Size of labour force
+#   UE91 = Number of unemployed
+#
+# NOTE: Here we make an (UNREALISTIC) assumption that all values of the y-variables 
+# also are known. This is for pedagogical purposes.
+# In practice, y-values are known (measured) for the sample elements only but 
+# x-variables are assumed known.
+
+# Next we'll add labels:
+install.packages("Hmisc") # install package Hmisc
+library(Hmisc) # load package Hmisc
+
+# add labels
+label(province91$Stratum) <- "Stratum" 
+label(province91$Cluster) <- "Cluster" 
+label(province91$Id) <- "Id number" 
+label(province91$Municipality) <- "Name of municipality"
+label(province91$POP91) <- "Population in 1991" 
+label(province91$POP91) <- "Population in 1991" 
+label(province91$LAB91) <- "Labour force in 1991" 
+label(province91$UE91) <- "Unemployed in 1991" 
+label(province91$HOU85) <- "Households in 1985" 
+label(province91$URB85) <- "Urbanization in 1985"
+
+# look at the structure of the data
+str(province91)
+# view the data
+View(province91)
+
 
 
 ```
