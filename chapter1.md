@@ -88,12 +88,44 @@ xp: 100
 key: a54011584f
 ```
 
+Descriptive statistics for population
 
+`@instructions`
+Try commands summary(), tapply().
 
+`@hint`
+Run codes.
 
+`@pre_exercise_code`
+```{r}
+province91 <- read.table("province91.txt",header = TRUE)
+```
+`@sample_code`
+```{r}
+# some basic statistics
+summary(province91)
 
+# Unemployed in 1991 by stratum
+tapply(province91$UE91, province91$Stratum, mean) # use na.rm=TRUE if missing values
 
+# Correlations:
+# first select variables
+corrdata <- c("POP91", "LAB91", "UE91", "HOU85", "URB85")
+popdata <- province91[ ,corrdata]
+cor(popdata)
+#round(cor(popdata, use="complete.obs"),2)
+# save matrix
+corrmatrix <- cor(popdata) 
 
+# Visualize correlations
+install.packages("corrplot") # install package corrplot
+library(corrplot) # load package corrplot
+corrplot(corrmatrix, method = "circle")
+corrplot(corrmatrix, method = "number")
+corrplot(corrmatrix, method = "ellipse")
+corrplot(corrmatrix, method=c("number"))
+
+```
 
 
 
