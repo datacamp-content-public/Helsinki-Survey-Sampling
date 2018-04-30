@@ -26,14 +26,22 @@ Auxiliary variables in the frame(x-variables). Values of x-variables known for a
 - Stratum  indicator
  
 - Cluster  indicator
-    Id = Case ID
-    Municipality
-    POP91 = Population in 1991
-    HOU85 = Number of households (1985 Census)
-    URB85 = Urbanization (1=town, 0=other)
+    
+- Id = Case ID
+
+- Municipality
+
+- POP91 = Population in 1991
+    
+- HOU85 = Number of households (1985 Census)
+
+- URB85  = Urbanization (1=town, 0=other)
+
 Potential study variables (y-variables):
-    LAB91 = Size of labour force
-    UE91 = Number of unemployed
+
+- LAB91  = Size of labour force
+ 
+- UE91 = Number of unemployed
 
 NOTE: Here we make an (UNREALISTIC) assumption that all values of the y-variables also are known. This is for pedagogical purposes. In practice, y-values are known (measured) for the sample elements only but x-variables are assumed known.
 
