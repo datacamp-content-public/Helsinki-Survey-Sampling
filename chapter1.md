@@ -30,8 +30,16 @@ Use package haven.
 install.packages("tidyverse")
 # load package tidyverse
 library(tidyverse)
-# read data
-province91 <- 
+# read Province91 text dataset
+province91 <- read.table("province91.txt",header = TRUE)
+
+# print head of dataset
+head(province91)
+
+# more info
+str(province91)
+
+
 ```
 
 
