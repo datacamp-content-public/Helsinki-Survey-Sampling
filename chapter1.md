@@ -1,7 +1,7 @@
 ---
 title: Data
 description: >-
-  This is a template chapter.
+  Here we'll load the dataset and calculate some descriptive statistics.
 
 
 ---
@@ -22,8 +22,10 @@ The dataset is available from webpage [http://vliss.helsinki.fi/chapter2/provinc
 
 Province91 population VARIABLES:
 Auxiliary variables in the frame(x-variables). Values of x-variables known for all population elements:
-    Stratum indicator
-    Cluster indicator
+    
+- Stratum  indicator
+ 
+- Cluster  indicator
     Id = Case ID
     Municipality
     POP91 = Population in 1991
@@ -154,7 +156,6 @@ corrplot(corrmatrix, method = "circle")
 corrplot(corrmatrix, method = "number")
 corrplot(corrmatrix, method = "ellipse")
 corrplot(corrmatrix, method=c("number"))
-
 ```
 `@solution`
 ```{r}
@@ -180,8 +181,6 @@ corrplot(corrmatrix, method = "circle")
 corrplot(corrmatrix, method = "number")
 corrplot(corrmatrix, method = "ellipse")
 corrplot(corrmatrix, method=c("number"))
-
-
 ```
 
 

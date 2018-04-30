@@ -1,10 +1,8 @@
 ---
-title: Totals etc.
-description: >-
-  Totals from the population data
-
+title       : jotain muuta
+description : blaa blaa
 ---
-## Totals etc.
+## SRS
 
 ```yaml
 type: NormalExercise
