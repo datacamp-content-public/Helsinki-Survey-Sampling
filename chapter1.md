@@ -39,7 +39,37 @@ NOTE: Here we make an (UNREALISTIC) assumption that all values of the y-variable
 Run codes.
 
 
+`@sample_code`
+```{r}
+# read Province91 text dataset
+province91 <- read.table("province91.txt",header = TRUE)
 
+# print head of dataset
+head(province91)
+
+# more info
+str(province91)
+install.packages("Hmisc")
+library(Hmisc)
+describe(province91)
+
+# Add labels:
+label(province91$Stratum) <- "Stratum" 
+label(province91$Cluster) <- "Cluster" 
+label(province91$Id) <- "Id number" 
+label(province91$Municipality) <- "Name of municipality"
+label(province91$POP91) <- "Population in 1991" 
+label(province91$POP91) <- "Population in 1991" 
+label(province91$LAB91) <- "Labour force in 1991" 
+label(province91$UE91) <- "Unemployed in 1991" 
+label(province91$HOU85) <- "Households in 1985" 
+label(province91$URB85) <- "Urbanization in 1985"
+
+# the structure of the data
+str(province91)
+# view the data
+View(province91)
+```
 `@solution`
 ```{r}
 # read Province91 text dataset
