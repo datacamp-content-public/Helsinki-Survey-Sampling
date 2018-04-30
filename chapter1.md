@@ -20,25 +20,6 @@ Introduction
 `@instructions`
 The dataset is available from webpage [http://vliss.helsinki.fi/chapter2/province91-population.html](url). Use read.table() to read the data.
 
-`@hint`
-Run codes.
-
-
-
-`@solution`
-```{r}
-# read Province91 text dataset
-province91 <- read.table("province91.txt",header = TRUE)
-
-# print head of dataset
-head(province91)
-
-# more info
-str(province91)
-install.packages("Hmisc")
-library(Hmisc)
-describe(province91)
-
 ##############################################################
 # Province91 population
 #
@@ -62,6 +43,25 @@ describe(province91)
 # In practice, y-values are known (measured) for the sample elements only but 
 # x-variables are assumed known.
 
+`@hint`
+Run codes.
+
+
+
+`@solution`
+```{r}
+# read Province91 text dataset
+province91 <- read.table("province91.txt",header = TRUE)
+
+# print head of dataset
+head(province91)
+
+# more info
+str(province91)
+install.packages("Hmisc")
+library(Hmisc)
+describe(province91)
+
 # Add labels:
 label(province91$Stratum) <- "Stratum" 
 label(province91$Cluster) <- "Cluster" 
@@ -78,8 +78,6 @@ label(province91$URB85) <- "Urbanization in 1985"
 str(province91)
 # view the data
 View(province91)
-
-
 ```
 
 
@@ -100,10 +98,6 @@ key: a54011584f
 
 
 
-`@instructions`
-
-
-`@hint`
 
 
 
