@@ -5,7 +5,7 @@ description: >-
 
 
 ---
-## Ex 1.1
+## Population data
 
 ```yaml
 type: NormalExercise
@@ -15,18 +15,17 @@ skills: 1
 key: b9c7132246
 ```
 
-Introduction
+Do some data science.
 
 `@instructions`
-Dataset Province'91 is from webpage [http://vliss.helsinki.fi/chapter2/province91-population.html](url).
+
 
 `@hint`
-Run codes
+
 
 
 `@sample_code`
 ```{r}
-
 # read Province91 text dataset
 province91 <- read.table("province91.txt",header = TRUE)
 
@@ -35,6 +34,9 @@ head(province91)
 
 # more info
 str(province91)
+install.packages("Hmisc")
+library(Hmisc)
+describe(province91)
 
 ##############################################################
 # Province91 population
@@ -59,11 +61,7 @@ str(province91)
 # In practice, y-values are known (measured) for the sample elements only but 
 # x-variables are assumed known.
 
-# Next we'll add labels:
-install.packages("Hmisc") # install package Hmisc
-library(Hmisc) # load package Hmisc
-
-# add labels
+# Add labels:
 label(province91$Stratum) <- "Stratum" 
 label(province91$Cluster) <- "Cluster" 
 label(province91$Id) <- "Id number" 
@@ -75,14 +73,40 @@ label(province91$UE91) <- "Unemployed in 1991"
 label(province91$HOU85) <- "Households in 1985" 
 label(province91$URB85) <- "Urbanization in 1985"
 
-# look at the structure of the data
+# the structure of the data
 str(province91)
 # view the data
 View(province91)
 
-
-
 ```
+
+
+
+
+
+
+
+---
+## Descriptive statistics for population
+
+```yaml
+type: NormalExercise
+
+xp: 100
+
+key: a54011584f
+```
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+
+
 
 
 
