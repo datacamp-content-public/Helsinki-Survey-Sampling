@@ -23,14 +23,14 @@ Download the Province'91 data. The dataset is available from [http://vliss.helsi
 `@hint`
 Use package haven.
 
-`@pre_exercise_code`
+
+
+
+`@sct`
 ```{r}
 install.packages("haven")
 library(haven)
 ```
-
-
-
 
 
 
