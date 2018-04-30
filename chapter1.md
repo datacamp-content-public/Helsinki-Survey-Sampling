@@ -126,7 +126,33 @@ corrplot(corrmatrix, method = "ellipse")
 corrplot(corrmatrix, method=c("number"))
 
 ```
+`@solution`
+```{r}
+# some basic statistics
+summary(province91)
 
+# Unemployed in 1991 by stratum
+tapply(province91$UE91, province91$Stratum, mean) # use na.rm=TRUE if missing values
+
+# Correlations:
+# first select variables
+corrdata <- c("POP91", "LAB91", "UE91", "HOU85", "URB85")
+popdata <- province91[ ,corrdata]
+cor(popdata)
+#round(cor(popdata, use="complete.obs"),2)
+# save matrix
+corrmatrix <- cor(popdata) 
+
+# Visualize correlations
+install.packages("corrplot") # install package corrplot
+library(corrplot) # load package corrplot
+corrplot(corrmatrix, method = "circle")
+corrplot(corrmatrix, method = "number")
+corrplot(corrmatrix, method = "ellipse")
+corrplot(corrmatrix, method=c("number"))
+
+
+```
 
 
 
