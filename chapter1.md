@@ -21,9 +21,13 @@ Introduction
 Download the Province'91 data. The dataset is available from [http://vliss.helsinki.fi/chapter2/province91-population.html ](url)
 
 `@hint`
+Use package haven.
 
-
-
+`@pre_exercise_code`
+```{r}
+install.packages("haven")
+library(haven)
+```
 
 
 
