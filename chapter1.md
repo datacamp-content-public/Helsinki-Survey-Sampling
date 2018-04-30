@@ -26,8 +26,12 @@ Use package haven.
 
 `@sample_code`
 ```{r}
+# install package haven
 install.packages("haven")
+# load package haven
 library(haven)
+# read data
+
 ```
 
 
