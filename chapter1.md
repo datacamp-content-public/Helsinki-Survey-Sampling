@@ -31,7 +31,7 @@ install.packages("haven")
 # load package haven
 library(haven)
 # read data
-
+province91 <- read_sas()
 ```
 
 
