@@ -26,12 +26,12 @@ Use package haven.
 
 `@sample_code`
 ```{r}
-# install package haven
-install.packages("haven")
-# load package haven
-library(haven)
+# install package tidyverse
+install.packages("tidyverse")
+# load package tidyverse
+library(tidyverse)
 # read data
-province91 <- read_sas()
+province91 <- 
 ```
 
 
