@@ -1,7 +1,7 @@
 ---
 title: Data
 description: >-
-  Here we'll load the dataset and calculate some descriptive statistics.
+  This is a template chapter.
 
 
 ---
@@ -21,27 +21,17 @@ Introduction
 The dataset is available from webpage [http://vliss.helsinki.fi/chapter2/province91-population.html](url). Use read.table() to read the data.
 
 Province91 population VARIABLES:
-Auxiliary variables in the frame(x-variables). Values of x-variables known for all population elements:
-    
-- Stratum  indicator
- 
-- Cluster  indicator
-    
-- Id = Case ID
-
-- Municipality
-
-- POP91 = Population in 1991
-    
-- HOU85 = Number of households (1985 Census)
-
-- URB85  = Urbanization (1=town, 0=other)
-
+Auxiliary variables in the frame (x-variables). Values of x-variables known for all population elements:
+    Stratum indicator
+    Cluster indicator
+    Id = Case ID
+    Municipality
+    POP91 = Population in 1991
+    HOU85 = Number of households (1985 Census)
+    URB85 = Urbanization (1=town, 0=other)
 Potential study variables (y-variables):
-
-- LAB91  = Size of labour force
- 
-- UE91 = Number of unemployed
+    LAB91 = Size of labour force
+    UE91 = Number of unemployed
 
 NOTE: Here we make an (UNREALISTIC) assumption that all values of the y-variables also are known. This is for pedagogical purposes. In practice, y-values are known (measured) for the sample elements only but x-variables are assumed known.
 
